@@ -11,8 +11,6 @@ use Yii;
  * @property string|null $name
  * @property string|null $image
  * @property int|null $price
- * @property string $created_at
- * @property string $deleted_at
  */
 class Product extends \yii\db\ActiveRecord
 {
@@ -31,8 +29,6 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['price'], 'integer'],
-            [['created_at', 'deleted_at'], 'required'],
-            [['created_at', 'deleted_at'], 'safe'],
             [['name', 'image'], 'string', 'max' => 255],
         ];
     }
@@ -47,8 +43,6 @@ class Product extends \yii\db\ActiveRecord
             'name' => 'Name',
             'image' => 'Image',
             'price' => 'Price',
-            'created_at' => 'Created At',
-            'deleted_at' => 'Deleted At',
         ];
     }
     public function getImageUrl()

@@ -34,8 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'price',
-            'created_at',
-            //'deleted_at',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Product $model, $key, $index, $column) {

@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Post;
+use Yii;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

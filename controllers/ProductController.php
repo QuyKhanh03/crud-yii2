@@ -83,8 +83,6 @@ class ProductController extends Controller
 
         if ($this->request->isPost) {
             $model->load($this->request->post());
-            $model->created_at = date('Y-m-d H:i:s');
-            $model->deleted_at = date('Y-m-d H:i:s');
             if ($model->save()) {
                 $uploadPath = Yii::getAlias('@webroot/uploads/');
                 $model->image = UploadedFile::getInstance($model, 'image');
